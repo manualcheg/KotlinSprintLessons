@@ -7,6 +7,6 @@ fun main() {
     println(countOfOrders)
     println(thankYouText)
 //    println(numberOfStuff)
-    numberOfStuff-=1
+    numberOfStuff -= 1
     println(numberOfStuff)
 }
