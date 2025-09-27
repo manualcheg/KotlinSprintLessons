@@ -2,9 +2,12 @@ package org.example.lesson1
 
 fun main(){
     val year: Short = 1961
-    val hour: Byte = 2
-    val minute: Byte = 10
+    var hour: String = "09"
+    var minute: String = "07"
     println(year)
     println(hour)
     println(minute)
+    hour = "10"
+    minute = "55"
+    print("$hour:$minute")
 }
