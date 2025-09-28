@@ -1,12 +1,13 @@
 package org.example.lesson1
 
+const val TIME_CONST = 60
+
 fun main() {
     var seconds: Int = 6480
-    var minutes: Int = 0
-    var hours: Int = 0
-    minutes = seconds / 60
-    seconds = seconds % 60
-    hours = minutes / 60
-    minutes = minutes % 60
-    println(String.format("%02d:%02d:%02d", hours, minutes, seconds))
+    var minutes: Int = seconds / TIME_CONST
+    var hours: Int = minutes / TIME_CONST
+    val secondsRemaining = seconds % TIME_CONST
+    val minutesRemaining = minutes % TIME_CONST
+
+    println("%02d:%02d:%02d".format(hours, minutesRemaining, secondsRemaining))
 }
