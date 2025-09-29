@@ -7,11 +7,12 @@ fun main() {
     val minutesStart: Int = 39
     val timeTravel: Int = 457
     var hourArrive: Int = hourStart + timeTravel / TIME_CONST
-    val minutesArrive: Int = if (minutesStart + timeTravel % TIME_CONST < TIME_CONST) {
-        minutesStart + timeTravel % TIME_CONST
+    val minutesRemainder = minutesStart + timeTravel % TIME_CONST
+    val minutesArrive: Int = if (minutesRemainder < TIME_CONST) {
+        minutesRemainder
     } else {
         hourArrive++
-        minutesStart + timeTravel % TIME_CONST - TIME_CONST
+        minutesRemainder - TIME_CONST
     }
-    println("Время прибытия поезда: $hourArrive:$minutesArrive")
+    println("Время прибытия поезда: %02d:%02d".format(hourArrive, minutesArrive))
 }
