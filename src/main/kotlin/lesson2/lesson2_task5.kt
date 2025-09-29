@@ -7,7 +7,7 @@ fun main() {
     val ratePercentage = 16.7
     val numberOfChargesInYear = 1
     val yearsOfDeposit = 20
-    val result = moneyStart*((1+(ratePercentage/100)/numberOfChargesInYear)
-        .pow(numberOfChargesInYear*yearsOfDeposit))
+    val result = moneyStart * ((1 + (ratePercentage / 100) / numberOfChargesInYear)
+        .pow(numberOfChargesInYear * yearsOfDeposit))
     println("%.3f".format(result))
 }
