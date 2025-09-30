@@ -1,14 +1,10 @@
 package org.example.lesson3
 
-
 fun main() {
     val name = "Джон Коннор"
-    val helloDay = "Доброго дня, %s!"
-    val helloEvening = "Доброго вечера, %s!"
+    val helloDay = "Доброго дня"
+    val helloEvening = "Доброго вечера"
 
-    var hello = helloDay
-    println(hello.format(name))
-
-    hello = helloEvening
-    println(hello.format(name))
+    println("$helloDay, $name!")
+    println("$helloEvening, $name!")
 }
