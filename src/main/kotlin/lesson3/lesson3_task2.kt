@@ -1,15 +1,14 @@
 package org.example.lesson3
 
 fun main() {
-    val result = "[%s %s %s, %d]"
-    val familyOld = "Андреева"
-    val familyNew = "Сидорова"
+    var family = "Андреева"
     val name = "Татьяна"
     val patronymic = "Сергеевна"
     val age1 = 20
     val age2 = 22
     var age = age1
-    println(result.format(familyOld, name, patronymic, age))
+    println("[$family $name $patronymic, $age]")
     age = age2
-    println(result.format(familyNew, name, patronymic, age))
+    family = "Сидорова"
+    println("[$family $name $patronymic, $age]")
 }
