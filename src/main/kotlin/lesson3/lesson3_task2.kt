@@ -4,11 +4,10 @@ fun main() {
     var family = "Андреева"
     val name = "Татьяна"
     val patronymic = "Сергеевна"
-    val age1 = 20
-    val age2 = 22
-    var age = age1
+    var age = 20
     println("[$family $name $patronymic, $age]")
-    age = age2
+
+    age = 22
     family = "Сидорова"
     println("[$family $name $patronymic, $age]")
 }
