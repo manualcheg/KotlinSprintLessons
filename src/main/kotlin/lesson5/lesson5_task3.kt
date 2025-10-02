@@ -4,8 +4,8 @@ const val RAGE_OF_NUMBERS_MIN = 0
 const val RAGE_OF_NUMBERS_MAX = 42
 
 fun main() {
-    val firstNumber = 15
-    val secondNumber = 9
+    val firstNumber = (RAGE_OF_NUMBERS_MIN..RAGE_OF_NUMBERS_MAX).random()
+    val secondNumber = (RAGE_OF_NUMBERS_MIN..RAGE_OF_NUMBERS_MAX).random()
     println("Загадано два числа из диапазона: от $RAGE_OF_NUMBERS_MIN до $RAGE_OF_NUMBERS_MAX")
     println("Угадайте первое число. Введите ваш вариант:")
     val answerFirst = readln().trim().toInt()
