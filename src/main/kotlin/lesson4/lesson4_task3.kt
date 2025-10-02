@@ -1,5 +1,8 @@
 package org.example.lesson4
 
+const val HUMIDITY_IDEAL = 20
+const val SEASON_BAD = "зима"
+
 fun main() {
     val isWeatherSun = true
     val isTentOpened = true
@@ -7,7 +10,7 @@ fun main() {
     val season = "зима"
 
     val isGoodConditions: Boolean =
-        isWeatherSun && isTentOpened && (humidity == 20) && (season != "зима")
+        isWeatherSun && isTentOpened && (humidity == HUMIDITY_IDEAL) && (season != SEASON_BAD)
 
     println("Благоприятные ли условия сейчас для роста бобовых? $isGoodConditions")
 }
