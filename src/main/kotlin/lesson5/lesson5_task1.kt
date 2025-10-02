@@ -1,10 +1,10 @@
 package org.example.lesson5
 
-private const val ANSWER = "16"
-private const val QUESTION = "Введите решение примера: 7 + 9 = "
-
 fun main() {
-    println(QUESTION)
-    val answer = readln().trim()
-    println(if (answer == ANSWER) "\nДобро пожаловать!" else "\nДоступ запрещен.")
+    val number1 = (0..10).random()
+    val number2 = (0..10).random()
+
+    println("Введите решение примера: $number1 + $number2 = ")
+    val answer = readln().trim().toInt()
+    println(if (answer == number1 + number2) "\nДобро пожаловать!" else "\nДоступ запрещен.")
 }
