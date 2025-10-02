@@ -1,5 +1,9 @@
 package org.example.lesson4
 
+const val SIZE_OF_CREW_MIN = 55
+const val SIZE_OF_CREW_MAX = 70
+const val QUANTITY_OF_FOOD_MIN = 50
+
 fun main() {
     var isShipNoDamage = false
     var sizeOfCrew = 1
@@ -19,11 +23,11 @@ fun main() {
     isShipNoDamage = readln().trim() == "2"
 
     val isTravelPossible: Boolean =
-        (isShipNoDamage && (sizeOfCrew >= 55 && sizeOfCrew <= 70) && quantityOfFood > 50) ||
-                (!isShipNoDamage && sizeOfCrew == 70 && quantityOfFood >= 50 && isWeatherGood)
+        (isShipNoDamage && (sizeOfCrew >= SIZE_OF_CREW_MIN && sizeOfCrew <= SIZE_OF_CREW_MAX)
+                && quantityOfFood > QUANTITY_OF_FOOD_MIN) ||
+                (!isShipNoDamage && sizeOfCrew == SIZE_OF_CREW_MAX &&
+                        quantityOfFood >= QUANTITY_OF_FOOD_MIN && isWeatherGood)
 
-    val wordNo = if (isTravelPossible) "" else {
-        " НЕ"
-    }
+    val wordNo = if (isTravelPossible) "" else " НЕ"
     println("\nКорабль$wordNo может отправится в плавание!")
 }
