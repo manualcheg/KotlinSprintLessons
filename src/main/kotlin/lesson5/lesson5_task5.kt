@@ -6,13 +6,10 @@ fun main() {
     val answers = mutableListOf(1, 1, 1)
 
     println("Загадано три числа из диапазона: от $RAGE_OF_NUMBERS_MIN до $RAGE_OF_NUMBERS_MAX")
-    println("\nБыли загаданы следующие числа: ${numbers[0]}, ${numbers[1]}, ${numbers[2]}")
-    println("Угадайте первое число. Введите ваш вариант:")
-    answers[0] = readln().trim().toInt()
-    println("Угадайте второе число. Введите ваш вариант:")
-    answers[1] = readln().trim().toInt()
-    println("Угадайте третье число. Введите ваш вариант:")
-    answers[2] = readln().trim().toInt()
+    for (i in 0..2) {
+        println("Угадайте ${i + 1}-е число. Введите ваш вариант:")
+        answers[i] = readln().trim().toInt()
+    }
 
     val result = numbers.intersect(answers.toSet()).size
 
