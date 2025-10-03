@@ -42,5 +42,6 @@ fun main() {
     } else {
         "ИМТ ≥ 30: Ожирение"
     }
+    println("\nВаш ИМТ = %.2f".format(imt))
     println("\n$resultToPrint")
 }
