@@ -3,12 +3,12 @@ package org.example.lesson5
 fun main() {
     val rage = RAGE_OF_NUMBERS_MIN..RAGE_OF_NUMBERS_MAX
     val numbers = listOf(rage.random(), rage.random(), rage.random())
-    val answers = mutableListOf(1, 1, 1)
+    val answers: MutableList<Int> = mutableListOf()
 
     println("Загадано три числа из диапазона: от $RAGE_OF_NUMBERS_MIN до $RAGE_OF_NUMBERS_MAX")
     for (i in 0..2) {
         println("Угадайте ${i + 1}-е число. Введите ваш вариант:")
-        answers[i] = readln().trim().toInt()
+        answers.add(readln().trim().toInt())
     }
 
     val result = numbers.intersect(answers.toSet()).size
@@ -20,5 +20,5 @@ fun main() {
         else -> "Вы не угадали ни одного числа!"
     }
     println("\n$resultToPrint")
-    println("\nА были загаданы следующие числа: ${numbers[0]}, ${numbers[1]}, ${numbers[2]}")
+    println("\nА были загаданы следующие числа: $numbers")
 }
